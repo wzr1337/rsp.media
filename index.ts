@@ -6,7 +6,7 @@ import { Player as StupidPlayer} from './stupid.player';
 
 import { Service, Resource, Element, ResourceUpdate, StatusCode, ElementResponse, CollectionResponse } from "../rsiPlugin";
 import { RendererObject, CollectionObject, ItemObject } from "./schema";
-import { Service as Medialibrary, Tracks} from "../medialibrary";
+import { Service as Medialibrary, Tracks} from "../rsp.medialibrary";
 
 
 class Media extends Service {
