@@ -4,7 +4,7 @@ import { rsiLogger } from "../../log";
 
 import { Player as StupidPlayer} from './stupid.player';
 
-import { Service, Resource, Element, ResourceUpdate, StatusCode, ElementResponse, CollectionResponse } from "../rsiPlugin";
+import { Service, Resource, Element, ResourceUpdate, StatusCode, ElementResponse, CollectionResponse } from "../../plugins/rsiPlugin";
 import { RendererObject, CollectionObject, ItemObject } from "./schema";
 import { Service as Medialibrary, Tracks} from "../rsp.medialibrary";
 
