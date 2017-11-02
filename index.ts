@@ -108,12 +108,14 @@ class Renderers implements Resource {
 
   getElement(elementId:string):ElementResponse {
     // find the element requested by the client
-    return {
+    var data = this._renderers.find((element:BehaviorSubject<RendererElement>) => {
+      if (element) return (<{id:string}>element.getValue().data).id === elementId;
+      return undefined;
+    });
+    return data ? {
       status: "ok",
-      data: this._renderers.find((element:BehaviorSubject<RendererElement>) => {
-        return (<{id:string}>element.getValue().data).id === elementId;
-      })
-    };
+      data: data
+    } : undefined;
   };
 
   getResource(offset?:string|number, limit?:string|number):CollectionResponse{
