@@ -35,7 +35,7 @@ describe("Renderers resource", () => {
   });
 
   it("should not find an arbitrary element", (done:DoneFn) => {
-    expect(r.getElement('123').data).toBeUndefined();
+    expect(r.getElement('123')).toBeUndefined();
     done();
   });
 
